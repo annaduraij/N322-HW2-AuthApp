@@ -1,50 +1,138 @@
-# Welcome to your Expo app 👋
+JAuthClerkApp
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
+Table of Contents
+Introduction
+Features
+Tech Stack
+Installation
+Running the App
+Usage
+Project Structure
+Acknowledgements
+Contact
+Introduction
+JAuthClerkApp is a React Native Expo application designed to demonstrate Clerk authentication within a mobile environment. The app features a tab-based navigation system, allowing users to seamlessly sign up, sign in, and manage their portfolios. This project serves as a practical implementation to test and validate Clerk's authentication capabilities in a React Native Expo setup.
 
-1. Install dependencies
+Features
+User Authentication: Secure sign-up, sign-in, and sign-out functionalities powered by Clerk.
+Tab Navigation: Intuitive navigation with at least three styled tabs.
+Styled Interface: Consistent and aesthetically pleasing design with a dark grey primary palette and mint accents.
+User Profile: Displays authenticated user's email and avatar.
+Portfolio Management: Allows users to view and manage their portfolio.
+Logout Functionality: Easy logout process that redirects users to the home screen.
+Integrated Images: Incorporates stock images to enhance visual appeal.
+Tech Stack
+Framework: React Native with Expo
+Authentication: Clerk
+State Management: React Hooks
+Styling: StyleSheet API
+Icons: @expo/vector-icons
+Additional Packages:
+expo-linear-gradient
+expo-blur
+expo-secure-store
+react-dom
+react-native-web
+@expo/metro-runtime
+Installation
+Prerequisites
+Node.js: Ensure you have Node.js v18.8 installed. You can download it from here.
 
-   ```bash
-   npm install
-   ```
+npm: Comes bundled with Node.js, version 8.18.
 
-2. Start the app
+Expo CLI: Install globally using npm if not already installed.
 
-   ```bash
-    npx expo start
-   ```
+bash
+Copy code
+npm install -g expo-cli
+Steps
+Clone the Repository
 
-In the output, you'll find options to open the app in a
+bash
+Copy code
+git clone https://github.com/annaduraij/N322-HW2-AuthApp.git
+Navigate to the Project Directory
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+bash
+Copy code
+cd N322-HW2-AuthApp
+Install Dependencies
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+bash
+Copy code
+npm install
+Install Expo Dependencies
 
-## Get a fresh project
+bash
+Copy code
+npx expo install react-dom react-native-web @expo/metro-runtime
+npx expo install expo-linear-gradient
+npx expo install expo-blur
+npx expo install @expo/vector-icons
+Install Additional Packages
 
-When you're ready, run:
+bash
+Copy code
+npm install @clerk/clerk-expo
+npm install expo-secure-store
+Running the App
+Start the Development Server
 
-```bash
-npm run reset-project
-```
+bash
+Copy code
+npm start
+Run on Your Device
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Using Expo Go:
+Download the Expo Go app from the App Store or Google Play Store.
+Scan the QR code displayed in the terminal or browser after running npm start.
+Using an Emulator:
+Ensure you have an Android or iOS emulator set up.
+Press a for Android or i for iOS in the terminal to launch the app on the emulator.
+Usage
+Sign Up / Sign In
 
-## Learn more
+Upon launching the app, users can sign up or sign in using their credentials.
+Clerk handles the authentication process, ensuring secure access.
+Navigate Through Tabs
 
-To learn more about developing your project with Expo, look at the following resources:
+After authentication, users gain access to the tab navigation system.
+The app includes at least three styled tabs:
+Home
+Images
+Portfolio
+Manage Portfolio
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Within the Portfolio tab, users can view their portfolio.
+The logout button is conveniently located here, allowing users to sign out and return to the home screen.
+Logout
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Tapping the Logout button signs the user out and redirects them to the home screen.
+This ensures that authenticated tabs are no longer accessible until the user signs back in.
+Project Structure
+scss
+Copy code
+N322-HW2-AuthApp/
+├── assets/
+│   ├── images/
+│   │   └── stock/
+│   │       └── [stock images]
+│   └── logo.png
+├── app/
+│   └── authenticated/
+│       └── (tabs)/
+│           ├── images.tsx
+│           └── portfolio.tsx
+├── components/
+│   └── FrostedContainer.tsx
+├── constants/
+│   └── Colors.ts
+├── styles/
+│   └── global.ts
+├── package.json
+└── README.md
+Acknowledgements
+Clerk.dev: For providing robust authentication solutions.
+Expo: For simplifying the development and deployment of React Native apps.
+ChatGPT: Significant contributions were made with ChatGPT assisting in advisory and debugging perspectives to enhance the development process of this application.
